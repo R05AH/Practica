@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi princesa &#128081; &#x1F496;</title>
+    <meta charset="UTF-8">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(/estilo/1309236.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+.contenedor {
+    margin: auto;
+    width: 900px;
+    margin-top: 300px;
+    text-align: center;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+    margin-top: 8%;
+}
+.opciones p {
+    display: initial;
+    padding: 20px;
+    color: black;
+    border-radius: 2px;
+    font-weight: bold;
+    text-align: center;
+}
+p.p1 {
+    background-color: #E50D31;
+    position: absolute;
+    top: 400px;
+    left: 450px;
+    width: 100px;
+    color: white;
+}
+p.p2{
+    background-color: #110766;
+    position: absolute;
+    top: 400px;
+    left: 650px;
+    width: 100px;
+    color: white;
+}
+p.p3{
+    background-color: #309936;
+    position: absolute;
+    top: 400px;
+    left: 850px;
+    width: 100px;
+    color: white;
+}
+#si {
+    position: absolute;
+    background-color:#309936;
+    left: 335px;
+    top: 5px;
+    width: 650px;
+    color: #110766;
+    padding: 50px;
+    display: none;
+}
+#nose {
+    background-color: #E50D31;
+    left: 335px;
+    position: absolute;
+    top: 35px;
+    width: 650px;
+    color: #110766;
+    padding: 50px;
+    display: none;
+}
+#no {
+    background-color: #110766;
+    left: 420px;position: absolute;
+    top: 122px;
+    width: 550px;
+    color: #E50D31;
+    padding: 50px;
+    display: none;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+  $(".p1").hover(function(){
+      arriba =  Math.random() * (400 - 1) + 1;
+      abajo =  Math.random() * (609 - 1) + 1;
+    $(this).css("top", arriba);
+    $(this).css("left", abajo);
+    });
+});
+function dijoSi(){
+    document.getElementById("si").style.display = "block";
+}
+function dijoNo(){
+    document.getElementById("no").style.display = "block";
+}
+function dijoNose(){
+    document.getElementById("nose").style.display = "block";
+}
+</script>
+<body>
+    <div class="titulo">
+        <h1>¿Puedo ser tu novio y empezar a escribir una historia juntos?</h1>
+    </div>
+<div class="contenedor">
+    <div class="opciones">
+        <p onclick="dijoNo()" class="p1">NO</p>
+        <p onclick="dijoNose()" class="p2">NOSE</p>
+        <p onclick="dijoSi()" class="p3">SI</p>
+        <div id="si">    
+            <img src="/estilo/DA.jpg" height="450vh">
+                <h2>Gracias mi niña!! <br> Sabía que dirías que sí &#x1F496; &#x1F46B; &#x1F33C;</h2>
+        </div>
+        <div id="nose">    
+            <img src="/estilo/si.jpg" height="350vh">
+                <h2>Ese no es el botón corecto, te daré otra oportunidad &#128519;</h2>
+        </div>
+        <div id="no">    
+            <img src="/estilo/C.jpg" width="100%" height="100%">
+                <h2>No es el botón correcto bb, intentalo otra vez &#128519;</h2>
+        </div>
+    </div>
+</div>
+</body>
+</html>
